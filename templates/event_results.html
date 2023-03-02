@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+
+    <h4>{{ name }}&nbsp;&nbsp;&nbsp;{{ date }}&nbsp;&nbsp;{{ time }}&nbsp;&nbsp;{{ loc }}&nbsp;&nbsp;{{ price }}</h4>
+    <!-- this fills in the jpg with the event id -->
+    <img src="\static\{{ id }}.jpg" width="200" height="200">
+
+    <br>
+    <br>
+
+    <form action="/event_results" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="qty" name="qty" placeholder="How many tickets?" type="number">
+        </div>
+        <button class="btn btn-info" type="submit">Buy</button>
+    </form>
+  <!--  -->
+
+{% endblock %}

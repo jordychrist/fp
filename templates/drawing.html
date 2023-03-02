@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Lottery Drawing
+{% endblock %}
+
+{% block main %}
+    <!--TIMER-->
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+<link rel="stylesheet" type="text/css" href="\static\styles.css">
+<meta charset="utf-8" />
+<script src="\static\script1.js"></script>
+<!--Animation-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" defer></script>
+<script src="\static\app.js" defer></script>
+    <section>
+        <div class="hero">
+            <img class="event" src="\static\{{ id }}.jpg" alt="event">
+            <h1 class="headline">{{ events1 }}</h1>
+            <h1 class="time" id="timer">&nbsp</h1>
+            <h1 class="raffle" id="raffle">THE WINNER IS</h1>
+            <h1 class="congrats" id="congrats">CONGRATULATIONS</h1>
+            <h1 class="winner" id="winner">{{ winner | upper }}</h1>
+            <h1 class="going" id="going">YOUR GOING TO</h1>
+            {% for name in name_list %}
+            <h1 class="hide">
+                <span class = "contestant{{ loop.index }}">{{ name | upper }}</span>
+            </h1>
+            {% endfor %}
+        </div>
+    </section>
+<div class="slider"></div>
+{% endblock %}

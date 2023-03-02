@@ -1,0 +1,41 @@
+a web app to do a "ticket lottery" for festivals. Puts users in pool and a certain amount of people are choosen to get the tickets.
+similar to burning flipside(everyone sends in moneyorders.)
+
+Python for the logic
+HTML for the display
+CSS for the styling
+Flask for webdev of the python
+Jinja for putting python logic into the html
+SQL for the database
+Javascript for animation
+
+----------------PROFILE----------------
+1. show available cash             --COMPLETE
+2. show pending events(date, ticket count, lottery time)  --COMPLETE
+3. Include info here on how the site works? FAQ? ----MOVED
+4. if drawing soon flash("message")  ----COMPLETE
+ 
+----------------EVENTS-----------------
+1. Search box for Artist/event   ----COMPLETE
+2. go button (SELECT EVENT)      ----COMPLETE
+3. return name, image, price, date.  ---COMPLETE
+4. buy button underneath           ----COMPLETE
+
+-------------BUY Tickets---------------
+1. Order Details          ---COMPLETE
+2. Take payment via cash from account      ---COMPLETE
+3. Order confirmation & Whats next(you have been entered into lottery, drawing time @ 1 minute.)  --COMPLETE
+
+------------Drawings-------------------
+1. implement the raffle here.   ----COMPLETE
+2. random number gen 0 to tickets sold ----COMPLETE
+3. scrolling window that stops on winners username? ----COMPLETE
+4. congratulate username and send email with tickets. ----COMPLETE
+
+----------HOMEPAGE---------------------
+1. Explain the page and how it works  ----COMPLETE
+2. Link logo to homepage   ---- COMPLETE
+3. Come up with homepage design ----COMPLETE
+
+----------CHANGE-------------
+1. Clean up JS   put variables in a list and iterate.

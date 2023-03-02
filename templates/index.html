@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+<link rel="stylesheet" type="text/css" href="\static\styles.css">
+<meta charset="utf-8" />
+<script src="\static\script.js"></script>
+
+<table class="table">
+    <thead class = "thead-dark">
+      <tr>
+        <th class="text-start">Event</th>
+        <th class="text-start">Date</th>
+        <th class="text-end">Price</th>
+        <th class="text-end">Qty</th>
+        <th class="text-end">Time until draw</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for event in events %}
+      <tr>
+        <td class="text-start">{{ event.name | upper }}</td>
+        <td class="text-start">{{ event.date }}</td>
+        <td class="text-end">${{ event.price }}</td>
+        <td class="text-end">{{ event.all_tickets }}</td>
+        <td class="text-end" id="timer">TBD</td>
+      </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+  <br>
+  <h4 class="text-middle">Cash Available: {{ total }}</h4>
+  <br>
+  <p> Need more cash to play? </p>
+  <form action ="/" method = "post">
+    <div class="mb-3">
+      <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="loan" name="loan" placeholder=" Amount" type="number" min = 1 max = 10000 step="1"
+      onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+      title="Numbers only">
+  </div>
+  <button class ="btn btn-info" type="submit">Request Loan</button>
+  </form>
+{% endblock %}

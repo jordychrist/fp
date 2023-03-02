@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Events
+{% endblock %}
+
+{% block main %}
+    <form action="/events" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="event" name="event" placeholder="Search events" type="text">
+        </div>
+        <button class="btn btn-info" type="submit">Lets go</button>
+    </form>
+{% endblock %}

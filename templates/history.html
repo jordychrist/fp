@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead class = "thead-dark">
+      <tr>
+        <th class="text-start">Event</th>
+        <th class="text-start">Date</th>
+        <th class="text-start">Price</th>
+        <th class="text-middle">Qty</th>
+        <th class="text-end">Won/Lost</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for event in events %}
+      <tr>
+        <td class="text-start">{{ event.name | upper }}</td>
+        <td class="text-start">{{ event.date }}</td>
+        <td class="text-start">${{ event.price }}</td>
+        <td class="text-middle">{{ event.all_tickets }}</td>
+        <td class="text-end">Draw Pending</td>
+      </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

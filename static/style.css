@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+main {
+    font-family: "heebo", sans-serif;
+}
+
+.landing {
+    min-height: 100vh;
+    background: url("/static/landing.jpg");
+    background-size: cover;
+    padding: 0rem 3rem;
+}
+
+.landing::after{
+  content:"";
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0.2;
+  top: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+    color:aqua;
+} 
+
+a { color:aqua;
+    z-index: 3;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    padding-left: 1.5rem;
+    font-size: 1.1rem;
+    z-index: 3;
+}
+
+#logo{
+    font-family: "Lobster", cursive;
+    font-weight: lighter;
+    font-size: 3rem;
+    color: aqua;
+    z-index: 3;
+}
+
+.big-text{
+    position: absolute;
+    top: 17%;
+    left: 51%;
+    transform: translate(-51%, -17%);
+    font-size: 5rem;
+    font-family: "Lobster", cursive;
+    color: aqua;
+}
+
+.intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-text{
+    color: aqua;
+    font-family: "Heebo", sans-serif;
+    font-size: 1.25rem;
+}
+
+.slider {
+    background: rgb(7, 7, 7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%)
+}
+
+.hide {
+    background: black;
+    overflow: hidden;
+}
+
+.hide span {
+    transform: translateY(100%);
+    display: inline-block;
+}
